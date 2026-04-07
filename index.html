@@ -13,6 +13,17 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
 		@media (max-width: 736px) {
+			/* Banner: fill full screen height */
+			#banner {
+				height: 100vh !important;
+				min-height: 100vh !important;
+			}
+
+			/* Re-show the scroll arrow */
+			#banner .more {
+				display: block !important;
+			}
+
 			/* Who I Am: stack photo above text */
 			#one .inner > div[style*="display:flex"] {
 				flex-direction: column-reverse !important;
@@ -32,6 +43,11 @@
 			}
 			#two .spotlight .content > div[style*="display:flex"] > img {
 				width: 100% !important;
+			}
+
+			/* Restore <br> inside spotlight content */
+			.spotlight .content br {
+				display: block !important;
 			}
 
 			/* Hide the spacing placeholder images (pic01.jpg, pic02.jpg, etc.) */
@@ -83,7 +99,7 @@
 								<h2>Who I Am</h2>
 							</header>
 							<div style="display:flex; align-items:flex-start; gap:2em; margin-bottom:2em; text-align:left;">
-								<p style="flex:1; margin:0;">A bubbly, eccentric, and passionate communicator with a
+								<p style="flex:1; margin:0; color:#ffffff;">A bubbly, eccentric, and passionate communicator with a
 deep love of sharing information. Effective and
 informational communications has always been a driving
 factor in everything I do. I love to try new things, take
@@ -127,7 +143,7 @@ teams.</p>
 						<section class="spotlight">
 							<div class="image"><img src="images/pic02.jpg" alt="" /></div><div class="content">
 								<h2>Social Media Content</h2>
-								<div style="display:flex; align-items:flex-start; gap:2em;">
+								<div style="display:flex; align-items:flex-start; gap:2em; text-align:left;">
 									<img src="images/socialMediaCanada.png" alt="Social Media Content" style="width:220px; flex-shrink:0; border-radius:4px; display:block;" />
 									<div>
 										<p>In my current role as a Social Media Advisor at Health Canada, my work focuses on creating accessible, engaging content that helps Canadians understand important public health topics while aligning with the Government of Canada’s health communication priorities.</p>
