@@ -55,6 +55,43 @@
 				display: none !important;
 			}
 		}
+		/* Blast of a Lifetime: blurred background */
+		#blast-block {
+			position: relative;
+			overflow: hidden;
+		}
+		#blast-block::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: url('images/tower.png') center center / cover no-repeat;
+			filter: blur(4px);
+			transform: scale(1.05);
+			z-index: 0;
+		}
+		#blast-block > * {
+			position: relative;
+			z-index: 1;
+		}
+
+		/* Science of Health Blogs: blurred background */
+		#science-block {
+			position: relative;
+			overflow: hidden;
+		}
+		#science-block::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: url('images/science.png') center center / cover no-repeat;
+			filter: blur(4px);
+			transform: scale(1.05);
+			z-index: 0;
+		}
+		#science-block > * {
+			position: relative;
+			z-index: 1;
+		}
 	</style>
 </head>
 	<body class="landing is-preload">
@@ -65,22 +102,6 @@
 				<!-- Header -->
 					<header id="header" class="alt">
 						<h1><a href="index.html">Shaylee Adams</a></h1>
-						<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="generic.html">Generic</a></li>
-											<li><a href="elements.html">Elements</a></li>
-											<li><a href="#">Sign Up</a></li>
-											<li><a href="#">Log In</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</nav>
 					</header>
 
 				<!-- Banner -->
@@ -267,49 +288,64 @@ and easy to discuss—especially for a younger audience.</p>
 					<section id="three" class="wrapper style3 special">
 						<div class="inner">
 							<header class="major">
-								<h2>Accumsan mus tortor nunc aliquet</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br />
-								fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
+								<h2>Storytelling & Partnerships</h2>
+								<p></p>
 							</header>
 							<ul class="features">
-								<li class="icon fa-paper-plane">
-									<h3>Arcu accumsan</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								<li id="blast-block" class="icon fa-paper-plane">
+									<h3>The Blast of a Lifetime</h3>
+									<p>In collaboration with Children’s Hospital of Eastern
+Ontario (CHEO), I represented PCL and the Centre
+Block Rehabilitation Project in creating a memorable
+experience for Griffin, our sponsored child through the
+CHEO Telethon. The initiative aligned with PCL’s
+community engagement goals while helping strengthen
+relationships with partners and organizations across
+Canada.</p>
+
+<p>I wrote this story to highlight the human side of the
+project and showcase how large infrastructure projects
+can also support meaningful community connections.</p>
+<a href="https://www.pcl.com/ca/en/insights/the-blast-of-a-lifetime" >Story: The Blast of a Lifetime</a>
 								</li>
-								<li class="icon solid fa-laptop">
-									<h3>Ac Augue Eget</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								<li id="science-block" class="icon solid fa-laptop">
+									<h3>Science of Health Blogs</h3>
+									<p>A part of Health Canada's mandate is to make national
+funded research more accessible to the public. The
+Science of Health blog is an open website that
+showcases different research initiatives within the health
+department of Canada. </p>
+<p>I wrote many blogs that highlight key research within the
+'healthy environments' sector that showcase modern
+government-funded science in an accessible and
+engaging way.</p>
+<div>
+	<p><a href="https://science.gc.ca/site/science/en/blogs/science-health/blown-away-air-pollution" >Blown away by air pollution</a></p>
+	<p><a href="https://science.gc.ca/site/science/en/blogs/science-health/unveiling-essence-natures-fragrance" >Unveiling the essence of nature's fragrance</a></p>
+</div>
 								</li>
-								<li class="icon solid fa-code">
-									<h3>Mus Scelerisque</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon solid fa-headphones-alt">
-									<h3>Mauris Imperdiet</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon fa-heart">
-									<h3>Aenean Primis</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon fa-flag">
-									<h3>Tortor Ut</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
+								
 							</ul>
 						</div>
 					</section>
 
 				<!-- CTA -->
 					<section id="cta" class="wrapper style4">
-						<div class="inner">
-							<header>
-								<h2>Arcue ut vel commodo</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum endrerit imperdiet amet eleifend fringilla.</p>
-							</header>
-							<ul class="actions stacked">
-								<li><a href="#" class="button fit primary">Activate</a></li>
-								<li><a href="#" class="button fit">Learn More</a></li>
+						<div class="inner" style="display:flex; align-items:center; gap:3em; flex-wrap:wrap;">
+							<h2 style="font-size:1.5em; margin:0; flex-shrink:0;">Let's Connect</h2>
+							<ul style="list-style:none; padding:0; margin:0;">
+								<li style="display:flex; align-items:center; gap:0.6em; margin-bottom:0.75em;">
+									<i class="icon solid fa-phone" style="font-size:1.1em;"></i>
+									<span>+1 647-273-5491</span>
+								</li>
+								<li style="display:flex; align-items:center; gap:0.6em; margin-bottom:0.75em;">
+									<i class="icon solid fa-envelope" style="font-size:1.1em;"></i>
+									<span><a href="mailto:shaylee.adams@gmail.com">shaylee.adams@gmail.com</a></span>
+								</li>
+								<li style="display:flex; align-items:center; gap:0.6em;">
+									<i class="icon solid fa-map-marker-alt" style="font-size:1.1em;"></i>
+									<span>321 Waverley St W, Ottawa ON</span>
+								</li>
 							</ul>
 						</div>
 					</section>
@@ -320,11 +356,10 @@ and easy to discuss—especially for a younger audience.</p>
 							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="/cdn-cgi/l/email-protection#05766d647c6960602b6461646876456268646c692b666a68" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 						</ul>
 						<ul class="copyright">
-							<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							<li>Shaylee's Portfolio</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 						</ul>
 					</footer>
 
